@@ -43,10 +43,6 @@ void setup()
   
   Joystick.begin();
   
-  while(!Serial);
-  Serial.begin(115200); /* For serial console output */
-  Serial.println(F("RcBusRx configured in SUMD receiver\n"));
-  
   Serial1.begin(SUMD_RX_SERIAL_CFG); /* Choose your serial and select xxxx__RX_SERIAL_CFG (list in RcBusRx.h) where xxxx is the protocol */
 
   RcBusRx.serialAttach(&Serial1);    /* Then, attach the SUMD receiver to this Serial1 */
